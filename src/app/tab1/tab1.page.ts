@@ -19,9 +19,18 @@ export class Tab1Page implements OnInit {
         console.log('resp', resp);
         this.peliculasRecientes = resp.results;
     });
+    this.getPopulares();
+  }
+
+  cargarMas() {
+    this.getPopulares();
+  }
+
+  getPopulares() {
     this.moviesService.getPopulares().subscribe(resp => {
       console.log('populares', resp);
-      this.populares = resp.results;
+      const arrTemp = [...this.populares, ...resp.results];
+      this.populares = arrTemp;
     });
   }
 
