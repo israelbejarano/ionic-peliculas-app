@@ -35,4 +35,9 @@ export class MoviesService {
     // tslint:disable-next-line: max-line-length
     return this.ejecutarQuery<RespuestaMDB>(`/discover/movie?primary_release_date.gte=${inicio}&primary_release_date.lte=${fin}`);
   }
+
+  getPopulares() {
+    const query = '/discover/movie?sort_by=popularity.desc';
+    return this.ejecutarQuery<RespuestaMDB>(query);
+  }
 }
