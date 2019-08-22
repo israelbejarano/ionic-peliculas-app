@@ -1,4 +1,4 @@
-# Peliuulas
+# Peliculas
 
 This project was generated with Ionic v5. Aplicación que muestra películas, permite buscar películas, puedes guardar en tus favoritos películas, puedes compartir películas y puedes borrar películas de tus favoritos.
 
